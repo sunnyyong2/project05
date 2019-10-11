@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="card" style="width: 18rem;">
+  <img src="{{movies.poster_url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{movies.title}}</h5>
+    <p class="card-text">{{movies.title_en}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{movies.genre}} | {{moviess.score}} | {{movies.audience}} | {{movies.open_date}}</li>
+    <li class="list-group-item">{{movies.watch_grade}}</li>
+    <li class="list-group-item">{{movies.description}}</li>
+  </ul>
+  <div class="card-body">
+      <a href="{% url 'movies:index' %}" class="btn btn-outline-success">목록</a>
+      <a href="{% url 'movies:update' movies.id %}"  class="btn btn-outline-success">수정</a>
+      <a href="{% url 'movies:delete' movies.id %}" class="btn btn-outline-success">삭제</a>
+  </div>
+</div>
+
+ 
+
+</ul>
+{% endblock %}

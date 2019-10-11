@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+<div class="container mt-8">
+{% block body %}
+  {% for movie in movies %}
+
+    <!-- <a href="/movies/{{movies.id}}/detail/">보기</a> -->
+
+    <ul class="list-group">
+      <li class="list-group-item">
+        <a href="{{movie.id}}/">
+        Title:{{movie.title}} 
+        </a></li>
+      <li class="list-group-item">평점:{{movie.score}}</li>
+      
+    </ul>
+
+    {% endfor %}
+
+
+    {% endblock %}
+</div>
